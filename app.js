@@ -1,5 +1,4 @@
 const API_URL = 'https://mlp-app-backend.onrender.com/api/ponies';
-// const API_URL = 'http://localhost:3000/api/ponies'; // dev local
 
 const TYPE_EMOJI = { 'Earth Pony': '🐎', Pegasus: '🪁', Unicorn: '🦄', Alicorn: '✨' };
 const ELEMENT_EMOJI = {
@@ -7,7 +6,6 @@ const ELEMENT_EMOJI = {
   Generosity: '💎', Loyalty: '⚡', Magic: '⭐', None: ''
 };
 
-// Elementos do DOM
 const form = document.getElementById('pony-form');
 const ponyId = document.getElementById('pony-id');
 const ponyName = document.getElementById('pony-name');
