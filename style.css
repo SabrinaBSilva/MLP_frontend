@@ -18,7 +18,6 @@ body {
   min-height: 100vh;
 }
 
-/* HEADER */
 header {
   display: flex;
   align-items: center;
@@ -53,7 +52,6 @@ header h1 {
 
 header p { font-size: 0.75rem; color: var(--text-muted); font-weight: 600; }
 
-/* MAIN */
 main {
   max-width: 720px;
   margin: 0 auto;
@@ -63,7 +61,6 @@ main {
   gap: 20px;
 }
 
-/* CARD */
 .card {
   background: rgba(255,255,255,0.92);
   border-radius: var(--radius);
@@ -79,7 +76,6 @@ main {
   color: var(--text);
 }
 
-/* FORM */
 .form-group {
   display: flex;
   flex-direction: column;
@@ -123,7 +119,6 @@ textarea { resize: vertical; }
   min-height: 1.2em;
 }
 
-/* BUTTONS */
 button {
   font-family: 'Nunito', sans-serif;
   font-weight: 700;
@@ -169,7 +164,6 @@ button {
 
 .hidden { display: none !important; }
 
-/* LIST */
 .list-header {
   display: flex;
   align-items: center;
