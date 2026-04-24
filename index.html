@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#e91e8c" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" href="icons/icon-192.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <title>🦄 My Little Pony App</title>
+</head>
+<body>
+
+  <header>
+    <span class="logo-icon">🦄</span>
+    <div>
+      <h1>My Little Pony</h1>
+      <p>Bem-vinda à Equestria!</p>
+    </div>
+  </header>
+
+  <main>
+
+    <div class="card">
+      <h2 id="form-title">Nova Pony</h2>
+      <form id="pony-form">
+        <input type="hidden" id="pony-id" />
+
+        <div class="form-group">
+          <label for="pony-name">Nome</label>
+          <input type="text" id="pony-name" placeholder="ex: Twilight Sparkle" required />
+        </div>
+
+        <div class="form-group">
+          <label for="pony-type">Tipo</label>
+          <select id="pony-type" required>
+            <option value="">Selecione...</option>
+            <option value="Earth Pony">🐎 Earth Pony</option>
+            <option value="Pegasus">🪁 Pegasus</option>
+            <option value="Unicorn">🦄 Unicorn</option>
+            <option value="Alicorn">✨ Alicorn</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="pony-color">Cor principal</label>
+          <input type="text" id="pony-color" placeholder="ex: Purple" required />
+        </div>
+
+        <div class="form-group">
+          <label for="pony-element">Elemento da Harmonia</label>
+          <select id="pony-element">
+            <option value="None">— Nenhum —</option>
+            <option value="Honesty">🍎 Honesty</option>
+            <option value="Kindness">🦋 Kindness</option>
+            <option value="Laughter">🎈 Laughter</option>
+            <option value="Generosity">💎 Generosity</option>
+            <option value="Loyalty">⚡ Loyalty</option>
+            <option value="Magic">⭐ Magic</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="pony-description">Descrição</label>
+          <textarea id="pony-description" rows="3" placeholder="Conte sobre essa pony..." required></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="pony-cutie">Cutie Mark</label>
+          <input type="text" id="pony-cutie" placeholder="ex: Estrela de seis pontas" />
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn-primary">💾 Salvar</button>
+          <button type="button" id="cancel-btn" class="btn-secondary hidden">✖ Cancelar</button>
+        </div>
+        <p id="message" class="message"></p>
+      </form>
+    </div>
+
+    <div class="card">
+      <div class="list-header">
+        <h2>Ponies de Equestria</h2>
+        <button id="reload-btn" class="btn-outline">🔄 Atualizar</button>
+      </div>
+      <div id="ponies-list"></div>
+    </div>
+
+  </main>
+
+  <footer>✨ My Little Pony App · Feito com magia e amizade 🦄</footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

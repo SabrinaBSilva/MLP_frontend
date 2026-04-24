@@ -1,0 +1,224 @@
+:root {
+  --pink: #e91e8c;
+  --purple: #9c27b0;
+  --border: #f3d4f7;
+  --bg: #fce4ec;
+  --text: #4a0e6b;
+  --text-muted: #9e6fa0;
+  --white: #fff;
+  --radius: 16px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Nunito', sans-serif;
+  background: linear-gradient(135deg, #fce4ec, #f3e5f5);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 20px;
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 2px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo-icon {
+  font-size: 2rem;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+header h1 {
+  font-family: 'Fredoka One', cursive;
+  font-size: 1.4rem;
+  background: linear-gradient(135deg, var(--pink), var(--purple));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+header p { font-size: 0.75rem; color: var(--text-muted); font-weight: 600; }
+
+/* MAIN */
+main {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 24px 16px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* CARD */
+.card {
+  background: rgba(255,255,255,0.92);
+  border-radius: var(--radius);
+  border: 2px solid var(--border);
+  padding: 24px;
+  box-shadow: 0 4px 20px rgba(156,39,176,0.1);
+}
+
+.card h2 {
+  font-family: 'Fredoka One', cursive;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: var(--text);
+}
+
+/* FORM */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 14px;
+}
+
+label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--purple);
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+input, textarea, select {
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.95rem;
+  padding: 9px 13px;
+  border: 2px solid var(--border);
+  border-radius: 10px;
+  background: #fff;
+  color: var(--text);
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: var(--pink);
+}
+
+textarea { resize: vertical; }
+
+.form-actions { display: flex; gap: 10px; margin-top: 4px; }
+
+.message {
+  margin-top: 10px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: var(--purple);
+  min-height: 1.2em;
+}
+
+/* BUTTONS */
+button {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  font-size: 0.88rem;
+  padding: 9px 20px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--pink), var(--purple));
+  color: #fff;
+}
+.btn-primary:hover { opacity: 0.9; transform: translateY(-1px); }
+
+.btn-secondary { background: #f3e5f5; color: var(--purple); }
+.btn-secondary:hover { background: #e1bee7; }
+
+.btn-outline {
+  background: transparent;
+  color: var(--pink);
+  border: 2px solid var(--pink);
+}
+.btn-outline:hover { background: var(--pink); color: #fff; }
+
+.btn-edit {
+  background: #e0f7fa;
+  color: #006064;
+  font-size: 0.8rem;
+  padding: 6px 14px;
+}
+.btn-edit:hover { background: #b2ebf2; }
+
+.btn-delete {
+  background: #fce4ec;
+  color: #c62828;
+  font-size: 0.8rem;
+  padding: 6px 14px;
+}
+.btn-delete:hover { background: #ffcdd2; }
+
+.hidden { display: none !important; }
+
+/* LIST */
+.list-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.pony-item {
+  border: 2px solid var(--border);
+  border-radius: 12px;
+  padding: 14px 16px;
+  margin-bottom: 10px;
+  background: #fdf6ff;
+  transition: box-shadow 0.2s;
+}
+.pony-item:hover { box-shadow: 0 4px 16px rgba(233,30,140,0.12); }
+
+.pony-item h3 {
+  font-family: 'Fredoka One', cursive;
+  font-size: 1rem;
+  margin-bottom: 4px;
+}
+
+.pony-item p { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 6px; }
+
+.pony-badges { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 10px; }
+
+.badge {
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 50px;
+  background: #f3e5f5;
+  color: var(--purple);
+}
+
+.item-actions { display: flex; gap: 8px; }
+
+.empty {
+  text-align: center;
+  padding: 32px;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  color: var(--text-muted);
+  font-size: 0.82rem;
+  font-weight: 600;
+}
